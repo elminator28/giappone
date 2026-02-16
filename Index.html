@@ -1,0 +1,911 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Viaggio in Giappone — Itinerario Giorno per Giorno</title>
+  <style>
+    :root{
+      --maxw:1100px;
+      --accent:#1b6fb3;
+      --muted:#6b7280;
+      --card-bg:#ffffff;
+      --page-bg:#f6f7f9;
+      --radius:10px;
+      --gap:14px;
+      --sidew:432px; /* right column width increased 20% from 360px */
+      --map-h:312px; /* map height increased 20% from 260px */
+      --map-large-h:432px; /* large map height increased 20% from 360px */
+    }
+    html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:var(--page-bg); color:#111;}
+    header{background:linear-gradient(90deg,#fff,#f0fbff);border-bottom:1px solid #e6eef6;padding:28px 18px;text-align:center}
+    header h1{margin:0;font-size:28px;color:var(--accent)}
+    header p{margin:8px 0 0;color:var(--muted)}
+    main{max-width:var(--maxw);margin:26px auto;padding:0 18px 60px}
+    .card{background:var(--card-bg);border-radius:var(--radius);box-shadow:0 6px 18px rgba(20,20,30,0.05);padding:16px;margin-bottom:18px}
+    table.toc{width:100%;border-collapse:collapse;margin-top:8px}
+    table.toc th, table.toc td{border:1px solid #eef3f7;padding:8px;text-align:left;font-size:14px}
+    table.toc th{background:#fbfdff;color:#0b4f7a}
+    .day{margin:22px 0;padding:16px;border-radius:var(--radius);background:var(--card-bg);box-shadow:0 6px 18px rgba(20,20,30,0.04)}
+    .day h2{margin:0 0 6px;color:#123a57;font-size:20px}
+    .date{color:#0b4f7a;font-weight:700;margin-bottom:6px}
+    .meta{color:var(--muted);font-size:14px;margin-bottom:10px}
+    .grid{display:grid;grid-template-columns:1fr var(--sidew);gap:var(--gap);align-items:start}
+    .map{height:var(--map-h);border-radius:8px;overflow:hidden;border:1px solid #e6eef6}
+    .map-large{height:var(--map-large-h);border-radius:8px;overflow:hidden;border:1px solid #e6eef6;margin-top:12px}
+    .program{margin-top:8px}
+    .program h4{margin:8px 0 6px;font-size:16px;color:#0b4f7a}
+    .program ul{margin:0 0 8px 18px;color:#333}
+    .visit-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:10px}
+    .visit{background:#fbfdff;border:1px solid #eef6fb;padding:10px;border-radius:8px}
+    .visit strong{display:block;color:#0b4f7a;margin-bottom:6px}
+    .visit p{margin:0;color:#333;font-size:14px}
+    .visit a{color:var(--accent);text-decoration:none;font-size:13px}
+    .back-link{display:block;margin-top:10px;font-size:13px}
+    .sleep{margin-top:10px;padding:10px;border-radius:8px;background:#fff8e6;color:#6b4a00;font-weight:700}
+    footer{margin-top:30px;text-align:center;color:var(--muted);font-size:14px;padding-bottom:40px}
+    hr{border:0;border-top:1px solid #eef3f7;margin:22px 0}
+    @media (max-width:980px){:root{--sidew:360px} .grid{grid-template-columns:1fr} .visit-list{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header id="top">
+    <h1>Viaggio in Giappone — Itinerario Giorno per Giorno</h1>
+    <p>Programma con date, dettagli dei voli, mappe per i luoghi da visitare e mappe dedicate ai trasferimenti (solo quando previsti).</p>
+  </header>
+
+  <main>
+    <!-- Indice come tabella con indicazione del pernottamento -->
+    <section id="toc" class="card">
+      <h3>Indice sintetico</h3>
+      <table class="toc" aria-label="Indice">
+        <thead>
+          <tr>
+            <th>Giorno</th>
+            <th>Data</th>
+            <th>Descrizione</th>
+            <th>Pernottamento</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><a href="#day-0">Giorno 0</a></td><td>sabato 11 luglio 2026</td><td>Partenza da MXP (Milano Malpensa) → scalo PVG (Shanghai Pudong)</td><td>a bordo / Tokyo</td></tr>
+          <tr><td><a href="#day-1">Giorno 1</a></td><td>domenica 12 luglio 2026</td><td>Tokyo: Meiji Jingu, Harajuku, Omotesando, Shibuya</td><td>Tokyo</td></tr>
+          <tr><td><a href="#day-2">Giorno 2</a></td><td>lunedì 13 luglio 2026</td><td>Tokyo: Palazzo Imperiale, Ginza, Shinjuku</td><td>Tokyo</td></tr>
+          <tr><td><a href="#day-3">Giorno 3</a></td><td>martedì 14 luglio 2026</td><td>Tokyo: Ueno, Asakusa, Ameyoko, Tokyo Skytree</td><td>Tokyo</td></tr>
+          <tr><td><a href="#day-4">Giorno 4</a></td><td>mercoledì 15 luglio 2026</td><td>Escursione in giornata a Nikkō</td><td>Tokyo</td></tr>
+          <tr><td><a href="#day-5">Giorno 5</a></td><td>giovedì 16 luglio 2026</td><td>Escursione in giornata al Monte Fuji</td><td>Tokyo</td></tr>
+          <tr><td><a href="#day-6">Giorno 6</a></td><td>venerdì 17 luglio 2026</td><td>Escursione in giornata a Kamakura</td><td>Tokyo</td></tr>
+          <tr><td><a href="#day-7">Giorno 7</a></td><td>sabato 18 luglio 2026</td><td>Trasferimento Tokyo → Kanazawa; Higashi Chaya</td><td>Kanazawa</td></tr>
+          <tr><td><a href="#day-8">Giorno 8</a></td><td>domenica 19 luglio 2026</td><td>Kanazawa: Kenroku‑en, Castello, Omicho Market</td><td>Kanazawa</td></tr>
+          <tr><td><a href="#day-9">Giorno 9</a></td><td>lunedì 20 luglio 2026</td><td>Trasferimento Kanazawa → Kyoto</td><td>Kyoto</td></tr>
+          <tr><td><a href="#day-10">Giorno 10</a></td><td>martedì 21 luglio 2026</td><td>Kyoto: Kiyomizudera, Heian-jingu, Fushimi Inari</td><td>Kyoto</td></tr>
+          <tr><td><a href="#day-11">Giorno 11</a></td><td>mercoledì 22 luglio 2026</td><td>Kyoto: Castello di Nijo, Ryoanji, Arashiyama</td><td>Kyoto</td></tr>
+          <tr><td><a href="#day-12">Giorno 12</a></td><td>giovedì 23 luglio 2026</td><td>Escursione in giornata a Nara</td><td>Kyoto</td></tr>
+          <tr><td><a href="#day-13">Giorno 13</a></td><td>venerdì 24 luglio 2026</td><td>Escursione in giornata a Osaka: Castello e Dotonbori</td><td>Kyoto</td></tr>
+          <tr><td><a href="#day-14">Giorno 14</a></td><td>sabato 25 luglio 2026</td><td>Partenza: trasferimento Kyoto → KIX (Kansai International) e voli di rientro</td><td>a bordo (arrivo il giorno dopo)</td></tr>
+          <tr><td><a href="#day-15">Giorno 15</a></td><td>domenica 26 luglio 2026</td><td>Arrivo a Milano Malpensa (MXP)</td><td>Casa / arrivo a MXP</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Voli (senza mappe) -->
+    <section id="flights" class="card">
+      <h3>Dettagli voli</h3>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <div style="background:#fbfdff;border:1px solid #eef6fb;padding:10px;border-radius:8px;min-width:260px">
+          <strong>Volo 46215</strong>
+          <p><strong>MXP — Milano Malpensa</strong> → <strong>PVG — Shanghai Pudong</strong> — Partenza: 12:15 (MXP) • Arrivo: 05:50 (PVG)</p>
+        </div>
+        <div style="background:#fbfdff;border:1px solid #eef6fb;padding:10px;border-radius:8px;min-width:260px">
+          <strong>Volo 46228</strong>
+          <p><strong>PVG — Shanghai Pudong</strong> → <strong>NRT — Tokyo Narita</strong> — Partenza: 10:00 (PVG) • Arrivo: 14:00 (NRT)</p>
+        </div>
+        <div style="background:#fbfdff;border:1px solid #eef6fb;padding:10px;border-radius:8px;min-width:260px">
+          <strong>Volo 46229</strong>
+          <p><strong>KIX — Kansai International (Osaka)</strong> → <strong>PEK — Beijing Capital</strong> — Partenza: 14:00 (KIX) • Arrivo: 16:25 (PEK)</p>
+        </div>
+        <div style="background:#fbfdff;border:1px solid #eef6fb;padding:10px;border-radius:8px;min-width:260px">
+          <strong>Volo di rientro</strong>
+          <p><strong>PEK — Beijing Capital</strong> → <strong>MXP — Milano Malpensa</strong> — Partenza: 01:30 (PEK) • Arrivo: 06:30 (MXP)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Giorno 0 -->
+    <section id="day-0" class="day">
+      <h2>Giorno 0 — Partenza da MXP / Volo verso Tokyo</h2>
+      <div class="date">sabato 11 luglio 2026</div>
+      <p class="meta"><strong>Volo:</strong> MXP — Milano Malpensa 12:15 → PVG — Shanghai Pudong 05:50 (Volo 46215). <strong>Pernottamento:</strong> a bordo / prima notte a Tokyo.</p>
+
+      <div class="grid">
+        <div>
+          <div class="program">
+            <h4>Programma</h4>
+            <ul>
+              <li>Mattina: Arrivo a Milano Malpensa, check-in e imbarco.</li>
+              <li>Pomeriggio/sera: Volo MXP → PVG (Volo 46215).</li>
+              <li>Notte: Scalo a PVG e proseguimento verso Tokyo il giorno successivo.</li>
+            </ul>
+          </div>
+
+          <div class="visit-list">
+            <div class="visit">
+              <strong>Logistica aeroporto</strong>
+              <p>Check-in e controllo bagagli prima del volo internazionale.</p>
+            </div>
+
+            <div class="visit">
+              <strong>Scalo a PVG</strong>
+              <p>Attesa per il volo PVG → NRT (Volo 46228) la mattina successiva.</p>
+            </div>
+          </div>
+
+          <a class="back-link" href="#toc">Torna all'indice</a>
+          <div class="sleep">Pernottamento: a bordo / prima notte in hotel a Tokyo</div>
+        </div>
+
+        <div>
+          <div class="map">
+            <iframe width="100%" height="100%" frameborder="0" style="border:0"
+              src="https://www.google.com/maps?q=Milano+Malpensa+Airport&output=embed" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr />
+
+    <!-- Giorno 1 -->
+    <section id="day-1" class="day">
+      <h2>Giorno 1 — Tokyo: Meiji Jingu, Harajuku, Omotesando, Shibuya</h2>
+      <div class="date">domenica 12 luglio 2026</div>
+      <p class="meta"><strong>Pernottamento:</strong> Tokyo.</p>
+
+      <div class="grid">
+        <div>
+          <div class="program">
+            <h4>Programma</h4>
+            <ul>
+              <li>Mattina: Arrivo a Tokyo Narita e trasferimento in hotel.</li>
+              <li>Tarda mattinata: Meiji Jingu.</li>
+              <li>Pomeriggio: Harajuku e Omotesando.</li>
+              <li>Sera: Shibuya Crossing e cena.</li>
+            </ul>
+          </div>
+
+          <div class="visit-list">
+            <div class="visit">
+              <strong>Meiji Jingu</strong>
+              <p>Grande santuario shintoista immerso in un bosco urbano; luogo di cerimonie e passeggiate. <a href="https://it.wikipedia.org/wiki/Meiji_Jingu" target="_blank" rel="noopener">Maggiori informazioni</a></p>
+            </div>
+
+            <div class="visit">
+              <strong>Harajuku (Takeshita)</strong>
+              <p>Via pedonale famosa per moda giovanile, negozi e dolci tipici; vivace e colorata. <a href="https://it.wikipedia.org/wiki/Harajuku" target="_blank" rel="noopener">Maggiori informazioni</a></p>
+            </div>
+
+            <div class="visit">
+              <strong>Omotesando</strong>
+              <p>Viale elegante con boutique e architettura moderna; ideale per una passeggiata rilassata. <a href="https://it.wikipedia.org/wiki/Omotesand%C5%8D" target="_blank" rel="noopener">Maggiori informazioni</a></p>
+            </div>
+
+            <div class="visit">
+              <strong>Shibuya Crossing</strong>
+              <p>Incrocio pedonale iconico, simbolo della vivacità urbana di Tokyo; ottimo per foto. <a href="https://it.wikipedia.org/wiki/Shibuya" target="_blank" rel="noopener">Maggiori informazioni</a></p>
+            </div>
+          </div>
+
+          <a class="back-link" href="#toc">Torna all'indice</a>
+          <div class="sleep">Pernottamento: Hotel a Tokyo</div>
+        </div>
+
+        <div>
+          <div class="map">
+            <iframe width="100%" height="100%" frameborder="0" style="border:0"
+              src="https://www.google.com/maps?q=Meiji+Jingu+Harajuku+Omotesando+Shibuya&output=embed" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr />
+
+    <!-- Giorno 2 -->
+    <section id="day-2" class="day">
+      <h2>Giorno 2 — Tokyo: Palazzo Imperiale, Ginza, Shinjuku</h2>
+      <div class="date">lunedì 13 luglio 2026</div>
+      <p class="meta"><strong>Pernottamento:</strong> Tokyo.</p>
+
+      <div class="grid">
+        <div>
+          <div class="program">
+            <h4>Programma</h4>
+            <ul>
+              <li>Mattina: Giardini orientali del Palazzo Imperiale.</li>
+              <li>Pranzo: Ginza.</li>
+              <li>Pomeriggio: Riposo o visite ai grandi magazzini.</li>
+              <li>Sera: Shinjuku.</li>
+            </ul>
+          </div>
+
+          <div class="visit-list">
+            <div class="visit">
+              <strong>Palazzo Imperiale</strong>
+              <p>Residenza ufficiale dell'Imperatore del Giappone con giardini storici e il ponte Nijubashi. <a href="https://it.wikipedia.org/wiki/Palazzo_imperiale_di_Tokyo" target="_blank" rel="noopener">Maggiori informazioni</a></p>
+            </div>
+
+            <div class="visit">
+              <strong>Ginza</strong>
+              <p>Quartiere commerciale di fascia alta, noto per grandi magazzini e ristoranti. <a href="https://it.wikipedia.org/wiki/Ginza" target="_blank" rel="noopener">Maggiori informazioni</a></p>
+            </div>
+
+            <div class="visit">
+              <strong>Shinjuku</strong>
+              <p>Area con grandi stazioni, centri commerciali e punti panoramici; vivace di sera. <a href="https://it.wikipedia.org/wiki/Shinjuku" target="_blank" rel="noopener">Maggiori informazioni</a></p>
+            </div>
+          </div>
+
+          <a class="back-link" href="#toc">Torna all'indice</a>
+          <div class="sleep">Pernottamento: Hotel a Tokyo</div>
+        </div>
+
+        <div>
+          <div class="map">
+            <iframe width="100%" height="100%" frameborder="0" style="border:0"
+              src="https://www.google.com/maps?q=Imperial+Palace+Ginza+Shinjuku&output=embed" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr />
+
+    <!-- Giorno 3 -->
+    <section id="day-3" class="day">
+      <h2>Giorno 3 — Tokyo: Ueno, Asakusa (Sensō-ji), Ameyoko, Tokyo Skytree</h2>
+      <div class="date">martedì 14 luglio 2026</div>
+      <p class="meta"><strong>Pernottamento:</strong> Tokyo.</p>
+
+      <div class="grid">
+        <div>
+          <div class="program">
+            <h4>Programma</h4>
+            <ul>
+              <li>Mattina: Ueno Park e musei.</li>
+              <li>Tarda mattinata: Sensō-ji e Nakamise-dori.</li>
+              <li>Pomeriggio: Ameyoko Market.</li>
+              <li>Sera: Tokyo Skytree (opzionale).</li>
+            </ul>
+          </div>
+
+          <div class="visit-list">
+            <div class="visit">
+              <strong>Ueno Park</strong>
+              <p>Parco cittadino con musei, stagni e spazi verdi; ideale per famiglie. <a href="https://it.wikipedia.org/wiki/Ueno" target="_blank" rel="noopener">Maggiori informazioni</a></p>
+            </div>
+
+            <div class="visit">
+              <strong>Sensō-ji</strong>
+              <p>Il più antico tempio di Tokyo, con la vivace via Nakamise ricca di bancarelle. <a href="https://it.wikipedia.org/wiki/Sens%C5%8D-ji" target="_blank" rel="noopener">Maggiori informazioni</a></p>
+            </div>
+
+            <div class="visit">
+              <strong>Ameyoko</strong>
+              <p>Mercato all'aperto vicino a Ueno Station, famoso per cibo e shopping. <a href="https://it.wikipedia.org/wiki/Ameya-Yokoch%C5%8D" target="_blank" rel="noopener">Maggiori informazioni</a></p>
+            </div>
+
+            <div class="visit">
+              <strong>Tokyo Skytree</strong>
+              <p>Torre di osservazione con viste panoramiche sulla città; attrazione moderna. <a href="https://it.wikipedia.org/wiki/Tokyo_Skytree" target="_blank" rel="noopener">Maggiori informazioni</a></p>
+            </div>
+          </div>
+
+          <a class="back-link" href="#toc">Torna all'indice</a>
+          <div class="sleep">Pernottamento: Hotel a Tokyo</div>
+        </div>
+
+        <div>
+          <div class="map">
+            <iframe width="100%" height="100%" frameborder="0" style="border:0"
+              src="https://www.google.com/maps?q=Ueno+Asakusa+Ameyoko+Tokyo+Skytree&output=embed" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr />
+
+    <!-- Giorno 4 (escursione in giornata) -->
+    <section id="day-4" class="day">
+      <h2>Giorno 4 — Escursione in giornata a Nikkō (da Tokyo)</h2>
+      <div class="date">mercoledì 15 luglio 2026</div>
+      <p class="meta"><strong>Trasferimento:</strong> Tokyo → Nikkō (treno). <strong>Pernottamento:</strong> Tokyo.</p>
+
+      <div class="grid">
+        <div>
+          <div class="program">
+            <h4>Programma</h4>
+            <ul>
+              <li>Mattina: Treno per Nikkō.</li>
+              <li>Giornata: Visita al complesso del Tōshō-gū e passeggiate tra i cedri.</li>
+              <li>Sera: Rientro a Tokyo.</li>
+            </ul>
+          </div>
+
+          <div class="visit-list">
+            <div class="visit">
+              <strong>Tōshō-gū</strong>
+              <p>Santuario riccamente decorato dedicato a Tokugawa Ieyasu, noto per le sue sculture e l'architettura. <a href="https://it.wikipedia.org/wiki/T%C5%8Dsh%C5%8D-g%C5%AB" target="_blank" rel="noopener">Maggiori informazioni</a></p>
+            </div>
+
+            <div class="visit">
+              <strong>Sentieri naturali</strong>
+              <p>Viali di cedri secolari e paesaggi montani che offrono un contrasto con Tokyo.</p>
+            </div>
+          </div>
+
+          <a class="back-link" href="#toc">Torna all'indice</a>
+          <div class="sleep">Pernottamento: Hotel a Tokyo</div>
+        </div>
+
+        <div>
+          <div class="map-large">
+            <iframe width="100%" height="100%" frameborder="0" style="border:0"
+              src="https://www.google.com/maps?q=Tokyo+to+Nikko+train&output=embed" allowfullscreen></iframe>
+          </div>
+
+          <div class="map" style="margin-top:12px">
+            <iframe width="100%" height="100%" frameborder="0" style="border:0"
+              src="https://www.google.com/maps?q=Nikko+Toshogu&output=embed" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr />
+
+    <!-- Giorno 5 (escursione in giornata) -->
+    <section id="day-5" class="day">
+      <h2>Giorno 5 — Escursione in giornata al Monte Fuji</h2>
+      <div class="date">giovedì 16 luglio 2026</div>
+      <p class="meta"><strong>Trasferimento:</strong> Tokyo → Kawaguchiko / Fuji Five Lakes (treno + bus). <strong>Pernottamento:</strong> Tokyo.</p>
+
+      <div class="grid">
+        <div>
+          <div class="program">
+            <h4>Programma</h4>
+            <ul>
+              <li>Mattina: Partenza per Kawaguchiko.</li>
+              <li>Giornata: Punti panoramici e passeggiate sul lago.</li>
+              <li>Pomeriggio: Possibile onsen o rientro a Tokyo.</li>
+            </ul>
+          </div>
+
+          <div class="visit-list">
+            <div class="visit">
+              <strong>Monte Fuji</strong>
+              <p>Simbolo del Giappone, vulcano sacro con viste spettacolari quando il cielo è sereno. <a href="https://it.wikipedia.org/wiki/Monte_Fuji" target="_blank" rel="noopener">Maggiori informazioni</a></p>
+            </div>
+
+            <div class="visit">
+              <strong>Lago Kawaguchi</strong>
+              <p>Uno dei Fuji Five Lakes, noto per le vedute del monte e le attività lacustri. <a href="https://it.wikipedia.org/wiki/Lago_Kawaguchi" target="_blank" rel="noopener">Maggiori informazioni</a></p>
+            </div>
+          </div>
+
+          <a class="back-link" href="#toc">Torna all'indice</a>
+          <div class="sleep">Pernottamento: Hotel a Tokyo</div>
+        </div>
+
+        <div>
+          <div class="map-large">
+            <iframe width="100%" height="100%" frameborder="0" style="border:0"
+              src="https://www.google.com/maps?q=Tokyo+to+Kawaguchiko+train&output=embed" allowfullscreen></iframe>
+          </div>
+
+          <div class="map" style="margin-top:12px">
+            <iframe width="100%" height="100%" frameborder="0" style="border:0"
+              src="https://www.google.com/maps?q=Kawaguchiko+Lake&output=embed" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr />
+
+    <!-- Giorno 6 (escursione in giornata) -->
+    <section id="day-6" class="day">
+      <h2>Giorno 6 — Escursione in giornata a Kamakura</h2>
+      <div class="date">venerdì 17 luglio 2026</div>
+      <p class="meta"><strong>Trasferimento:</strong> Tokyo → Kamakura (treno). <strong>Pernottamento:</strong> Tokyo.</p>
+
+      <div class="grid">
+        <div>
+          <div class="program">
+            <h4>Programma</h4>
+            <ul>
+              <li>Mattina: Treno per Kamakura; visita al Grande Buddha (Daibutsu).</li>
+              <li>Pomeriggio: Hasedera e passeggiate costiere.</li>
+              <li>Sera: Rientro a Tokyo.</li>
+            </ul>
+          </div>
+
+          <div class="visit-list">
+            <div class="visit">
+              <strong>Grande Buddha (Kōtoku-in)</strong>
+              <p>Statua bronzea all'aperto, simbolo di Kamakura e meta storica. <a href="https://it.wikipedia.org/wiki/Grande_Buddha_di_Kamakura" target="_blank" rel="noopener">Maggiori informazioni</a></p>
+            </div>
+
+            <div class="visit">
+              <strong>Hasedera</strong>
+              <p>Tempio con giardini e vista sul mare, noto per le sue statue e i fiori stagionali. <a href="https://it.wikipedia.org/wiki/Hasedera" target="_blank" rel="noopener">Maggiori informazioni</a></p>
+            </div>
+          </div>
+
+          <a class="back-link" href="#toc">Torna all'indice</a>
+          <div class="sleep">Pernottamento: Hotel a Tokyo</div>
+        </div>
+
+        <div>
+          <div class="map-large">
+            <iframe width="100%" height="100%" frameborder="0" style="border:0"
+              src="https://www.google.com/maps?q=Tokyo+to+Kamakura+train&output=embed" allowfullscreen></iframe>
+          </div>
+
+          <div class="map" style="margin-top:12px">
+            <iframe width="100%" height="100%" frameborder="0" style="border:0"
+              src="https://www.google.com/maps?q=Kamakura+Great+Buddha&output=embed" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr />
+
+    <!-- Giorno 7 (reverted itinerary content) -->
+    <section id="day-7" class="day">
+      <h2>Giorno 7 — Trasferimento a Kanazawa / Higashi Chaya</h2>
+      <div class="date">sabato 18 luglio 2026</div>
+      <p class="meta"><strong>Trasferimento:</strong> Tokyo → Kanazawa (shinkansen / limited express). <strong>Pernottamento:</strong> Kanazawa.</p>
+
+      <div class="grid">
+        <div>
+          <div class="program">
+            <h4>Programma</h4>
+            <ul>
+              <li>Mattina: Partenza in treno da Tokyo verso Kanazawa; arrivo e check-in in hotel.</li>
+              <li>Pomeriggio: Esplorazione del quartiere storico di Higashi Chaya.</li>
+              <li>Sera: Cena e passeggiata serale nei dintorni.</li>
+            </ul>
+          </div>
+
+          <div class="visit-list">
+            <div class="visit">
+              <strong>Higashi Chaya</strong>
+              <p>Storico quartiere delle case da tè, con strade ben conservate e atmosfera tradizionale. <a href="https://it.wikipedia.org/wiki/Higashi_Chaya" target="_blank" rel="noopener">Maggiori informazioni</a></p>
+            </div>
+
+            <div class="visit">
+              <strong>Artigianato locale</strong>
+              <p>Negozietti con oggetti tradizionali e foglia d'oro tipici di Kanazawa.</p>
+            </div>
+          </div>
+
+          <a class="back-link" href="#toc">Torna all'indice</a>
+          <div class="sleep">Pernottamento: Hotel a Kanazawa</div>
+        </div>
+
+        <div>
+          <!-- Transfer map (più grande) reverted to simple query to avoid consent embed issues -->
+          <div class="map-large">
+            <iframe width="100%" height="100%" frameborder="0" style="border:0"
+              src="https://www.google.com/maps?q=Tokyo+to+Kanazawa+train&output=embed" allowfullscreen></iframe>
+          </div>
+
+          <!-- Mappa luoghi da visitare -->
+          <div class="map" style="margin-top:12px">
+            <iframe width="100%" height="100%" frameborder="0" style="border:0"
+              src="https://www.google.com/maps?q=Higashi+Chaya+Kanazawa&output=embed" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr />
+
+    <!-- Giorno 8 -->
+    <section id="day-8" class="day">
+      <h2>Giorno 8 — Kanazawa: Kenroku‑en, Castello, Omicho Market</h2>
+      <div class="date">domenica 19 luglio 2026</div>
+      <p class="meta"><strong>Pernottamento:</strong> Kanazawa.</p>
+
+      <div class="grid">
+        <div>
+          <div class="program">
+            <h4>Programma</h4>
+            <ul>
+              <li>Mattina: Kenroku‑en.</li>
+              <li>Mezzogiorno: Castello di Kanazawa.</li>
+              <li>Pomeriggio: Mercato Omicho.</li>
+            </ul>
+          </div>
+
+          <div class="visit-list">
+            <div class="visit">
+              <strong>Kenroku‑en</strong>
+              <p>Uno dei giardini più celebri del Giappone, noto per la sua bellezza paesaggistica. <a href="https://it.wikipedia.org/wiki/Kenroku-en" target="_blank" rel="noopener">Maggiori informazioni</a></p>
+            </div>
+
+            <div class="visit">
+              <strong>Castello di Kanazawa</strong>
+              <p>Complesso storico con mura e giardini restaurati; interessante per la storia locale. <a href="https://it.wikipedia.org/wiki/Castello_di_Kanazawa" target="_blank" rel="noopener">Maggiori informazioni</a></p>
+            </div>
+
+            <div class="visit">
+              <strong>Omicho Market</strong>
+              <p>Mercato centrale di Kanazawa, famoso per il pesce fresco e le specialità locali.</p>
+            </div>
+          </div>
+
+          <a class="back-link" href="#toc">Torna all'indice</a>
+          <div class="sleep">Pernottamento: Hotel a Kanazawa</div>
+        </div>
+
+        <div>
+          <div class="map">
+            <iframe width="100%" height="100%" frameborder="0" style="border:0"
+              src="https://www.google.com/maps?q=Kenrokuen+Garden+Kanazawa+Omicho+Market&output=embed" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr />
+
+    <!-- Giorno 9 (transfer Kanazawa -> Kyoto) -->
+    <section id="day-9" class="day">
+      <h2>Giorno 9 — Trasferimento Kanazawa → Kyoto</h2>
+      <div class="date">lunedì 20 luglio 2026</div>
+      <p class="meta"><strong>Trasferimento:</strong> Kanazawa → Kyoto (treno). <strong>Pernottamento:</strong> Kyoto.</p>
+
+      <div class="grid">
+        <div>
+          <div class="program">
+            <h4>Programma</h4>
+            <ul>
+              <li>Mattina: Ultime visite a Kanazawa.</li>
+              <li>Mezzogiorno: Treno per Kyoto e check-in.</li>
+              <li>Pomeriggio/sera: Passeggiata a Gion.</li>
+            </ul>
+          </div>
+
+          <div class="visit-list">
+            <div class="visit">
+              <strong>Viaggio</strong>
+              <p>Treno verso Kyoto; sistemazione in hotel e preparazione per i giorni successivi.</p>
+            </div>
+
+            <div class="visit">
+              <strong>Gion</strong>
+              <p>Storico quartiere delle geisha con vie tradizionali e atmosfera serale. <a href="https://it.wikipedia.org/wiki/Gion" target="_blank" rel="noopener">Maggiori informazioni</a></p>
+            </div>
+          </div>
+
+          <a class="back-link" href="#toc">Torna all'indice</a>
+          <div class="sleep">Pernottamento: Hotel a Kyoto</div>
+        </div>
+
+        <div>
+          <div class="map-large">
+            <iframe width="100%" height="100%" frameborder="0" style="border:0"
+              src="https://www.google.com/maps?q=Kanazawa+to+Kyoto+train&output=embed" allowfullscreen></iframe>
+          </div>
+
+          <div class="map" style="margin-top:12px">
+            <iframe width="100%" height="100%" frameborder="0" style="border:0"
+              src="https://www.google.com/maps?q=Gion+Kyoto&output=embed" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr />
+
+    <!-- Giorno 10 -->
+    <section id="day-10" class="day">
+      <h2>Giorno 10 — Kyoto: Kiyomizudera, Heian-jingu, Fushimi Inari</h2>
+      <div class="date">martedì 21 luglio 2026</div>
+      <p class="meta"><strong>Pernottamento:</strong> Kyoto.</p>
+
+      <div class="grid">
+        <div>
+          <div class="program">
+            <h4>Programma</h4>
+            <ul>
+              <li>Mattina: Kiyomizudera.</li>
+              <li>Mezzogiorno: Heian-jingu (se il tempo lo permette).</li>
+              <li>Pomeriggio: Fushimi Inari.</li>
+            </ul>
+          </div>
+
+          <div class="visit-list">
+            <div class="visit">
+              <strong>Kiyomizudera</strong>
+              <p>Tempio famoso per la sua terrazza panoramica e le vie storiche circostanti. <a href="https://it.wikipedia.org/wiki/Kiyomizu-dera" target="_blank" rel="noopener">Maggiori informazioni</a></p>
+            </div>
+
+            <div class="visit">
+              <strong>Heian-jingu</strong>
+              <p>Santuario moderno con ampi giardini e un grande torii distintivo. <a href="https://it.wikipedia.org/wiki/Heian-jing%C5%AB" target="_blank" rel="noopener">Maggiori informazioni</a></p>
+            </div>
+
+            <div class="visit">
+              <strong>Fushimi Inari</strong>
+              <p>Santuario celebre per i suoi sentieri di migliaia di torii rossi che salgono il colle. <a href="https://it.wikipedia.org/wiki/Fushimi_Inari-taisha" target="_blank" rel="noopener">Maggiori informazioni</a></p>
+            </div>
+          </div>
+
+          <a class="back-link" href="#toc">Torna all'indice</a>
+          <div class="sleep">Pernottamento: Hotel a Kyoto</div>
+        </div>
+
+        <div>
+          <div class="map">
+            <iframe width="100%" height="100%" frameborder="0" style="border:0"
+              src="https://www.google.com/maps?q=Kiyomizu-dera+Heian+Shrine+Fushimi+Inari&output=embed" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr />
+
+    <!-- Giorno 11 -->
+    <section id="day-11" class="day">
+      <h2>Giorno 11 — Kyoto: Castello di Nijo, Ryoanji, Arashiyama</h2>
+      <div class="date">mercoledì 22 luglio 2026</div>
+      <p class="meta"><strong>Pernottamento:</strong> Kyoto.</p>
+
+      <div class="grid">
+        <div>
+          <div class="program">
+            <h4>Programma</h4>
+            <ul>
+              <li>Mattina: Castello di Nijo.</li>
+              <li>Mezzogiorno: Ryoanji.</li>
+              <li>Pomeriggio: Arashiyama e foresta di bambù.</li>
+            </ul>
+          </div>
+
+          <div class="visit-list">
+            <div class="visit">
+              <strong>Castello di Nijo</strong>
+              <p>Residenza storica degli shogun con interni decorati e giardini. <a href="https://it.wikipedia.org/wiki/Castello_di_Nij%C5%8D" target="_blank" rel="noopener">Maggiori informazioni</a></p>
+            </div>
+
+            <div class="visit">
+              <strong>Ryoanji</strong>
+              <p>Tempio zen noto per il suo giardino di pietra minimalista. <a href="https://it.wikipedia.org/wiki/Ry%C5%8Dan-ji" target="_blank" rel="noopener">Maggiori informazioni</a></p>
+            </div>
+
+            <div class="visit">
+              <strong>Arashiyama</strong>
+              <p>Zona panoramica con la famosa foresta di bambù e passeggiate lungo il fiume. <a href="https://it.wikipedia.org/wiki/Arashiyama" target="_blank" rel="noopener">Maggiori informazioni</a></p>
+            </div>
+          </div>
+
+          <a class="back-link" href="#toc">Torna all'indice</a>
+          <div class="sleep">Pernottamento: Hotel a Kyoto</div>
+        </div>
+
+        <div>
+          <div class="map">
+            <iframe width="100%" height="100%" frameborder="0" style="border:0"
+              src="https://www.google.com/maps?q=Nijo+Castle+Ryoanji+Arashiyama&output=embed" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr />
+
+    <!-- Giorno 12 (escursione in giornata) -->
+    <section id="day-12" class="day">
+      <h2>Giorno 12 — Escursione in giornata a Nara: Tōdai-ji, Parco di Nara, Kasuga Taisha</h2>
+      <div class="date">giovedì 23 luglio 2026</div>
+      <p class="meta"><strong>Trasferimento:</strong> Kyoto → Nara (treno). <strong>Pernottamento:</strong> Kyoto.</p>
+
+      <div class="grid">
+        <div>
+          <div class="program">
+            <h4>Programma</h4>
+            <ul>
+              <li>Mattina: Treno per Nara; visita al Tōdai-ji.</li>
+              <li>Mezzogiorno: Parco di Nara e interazione con i cervi.</li>
+              <li>Pomeriggio: Kasuga Taisha e rientro a Kyoto.</li>
+            </ul>
+          </div>
+
+          <div class="visit-list">
+            <div class="visit">
+              <strong>Tōdai-ji</strong>
+              <p>Tempio famoso per la grande sala del Buddha e la statua imponente. <a href="https://it.wikipedia.org/wiki/T%C5%8Ddai-ji" target="_blank" rel="noopener">Maggiori informazioni</a></p>
+            </div>
+
+            <div class="visit">
+              <strong>Parco di Nara</strong>
+              <p>Parco urbano dove i cervi girano liberi; luogo ideale per passeggiare. <a href="https://it.wikipedia.org/wiki/Parco_di_Nara" target="_blank" rel="noopener">Maggiori informazioni</a></p>
+            </div>
+
+            <div class="visit">
+              <strong>Kasuga Taisha</strong>
+              <p>Santuario noto per le sue numerose lanterne e l'atmosfera boschiva. <a href="https://it.wikipedia.org/wiki/Kasuga_Taisha" target="_blank" rel="noopener">Maggiori informazioni</a></p>
+            </div>
+          </div>
+
+          <a class="back-link" href="#toc">Torna all'indice</a>
+          <div class="sleep">Pernottamento: Hotel a Kyoto</div>
+        </div>
+
+        <div>
+          <div class="map-large">
+            <iframe width="100%" height="100%" frameborder="0" style="border:0"
+              src="https://www.google.com/maps?q=Kyoto+to+Nara+train&output=embed" allowfullscreen></iframe>
+          </div>
+
+          <div class="map" style="margin-top:12px">
+            <iframe width="100%" height="100%" frameborder="0" style="border:0"
+              src="https://www.google.com/maps?q=Todaiji+Nara+Park+Kasuga+Taisha&output=embed" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr />
+
+    <!-- Giorno 13 (escursione in giornata) -->
+    <section id="day-13" class="day">
+      <h2>Giorno 13 — Escursione in giornata a Osaka: Castello e Dotonbori</h2>
+      <div class="date">venerdì 24 luglio 2026</div>
+      <p class="meta"><strong>Trasferimento:</strong> Kyoto → Osaka (treno). <strong>Pernottamento:</strong> Kyoto.</p>
+
+      <div class="grid">
+        <div>
+          <div class="program">
+            <h4>Programma</h4>
+            <ul>
+              <li>Mattina: Treno per Osaka; visita al Castello di Osaka.</li>
+              <li>Pomeriggio: Esplorazione di quartieri o musei.</li>
+              <li>Sera: Dotonbori per street food e passeggiata; rientro a Kyoto.</li>
+            </ul>
+          </div>
+
+          <div class="visit-list">
+            <div class="visit">
+              <strong>Castello di Osaka</strong>
+              <p>Monumento storico con museo e vedute panoramiche dalla torre. <a href="https://it.wikipedia.org/wiki/Castello_di_Osaka" target="_blank" rel="noopener">Maggiori informazioni</a></p>
+            </div>
+
+            <div class="visit">
+              <strong>Dotonbori</strong>
+              <p>Quartiere famoso per le insegne luminose e il cibo di strada. <a href="https://it.wikipedia.org/wiki/Dotonbori" target="_blank" rel="noopener">Maggiori informazioni</a></p>
+            </div>
+          </div>
+
+          <a class="back-link" href="#toc">Torna all'indice</a>
+          <div class="sleep">Pernottamento: Hotel a Kyoto</div>
+        </div>
+
+        <div>
+          <div class="map-large">
+            <iframe width="100%" height="100%" frameborder="0" style="border:0"
+              src="https://www.google.com/maps?q=Kyoto+to+Osaka+train&output=embed" allowfullscreen></iframe>
+          </div>
+
+          <div class="map" style="margin-top:12px">
+            <iframe width="100%" height="100%" frameborder="0" style="border:0"
+              src="https://www.google.com/maps?q=Osaka+Castle+Dotonbori&output=embed" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr />
+
+    <!-- Giorno 14: departure on Saturday -->
+    <section id="day-14" class="day">
+      <h2>Giorno 14 — Partenza: trasferimento Kyoto → KIX e voli di rientro</h2>
+      <div class="date">sabato 25 luglio 2026</div>
+      <p class="meta"><strong>Trasferimento:</strong> Kyoto → KIX — Kansai International (Osaka) • <strong>Volo:</strong> KIX — Kansai International 14:00 → PEK — Beijing Capital 16:25 (Volo 46229) • <strong>Pernottamento:</strong> a bordo (arrivo il giorno dopo a Milano Malpensa).</p>
+
+      <div class="grid">
+        <div>
+          <div class="program">
+            <h4>Programma</h4>
+            <ul>
+              <li>Mattina: Check-out dall'hotel e trasferimento a KIX.</li>
+              <li>Mezzogiorno: Check-in internazionale e controllo bagagli.</li>
+              <li>Pomeriggio: Volo KIX → PEK (46229), proseguimento verso MXP nella notte/prime ore del giorno successivo.</li>
+            </ul>
+          </div>
+
+          <div class="visit-list">
+            <div class="visit">
+              <strong>Trasferimento a KIX</strong>
+              <p>Organizzare il trasferimento con anticipo per rispettare i tempi di check-in internazionale.</p>
+            </div>
+
+            <div class="visit">
+              <strong>Voli di rientro</strong>
+              <p>KIX 14:00 → PEK 16:25 (46229); proseguimento PEK → MXP (partenza notturna, arrivo il giorno successivo).</p>
+            </div>
+          </div>
+
+          <a class="back-link" href="#toc">Torna all'indice</a>
+          <div class="sleep">Pernottamento: A bordo (arrivo a Milano il giorno successivo)</div>
+        </div>
+
+        <div>
+          <div class="map-large">
+            <iframe width="100%" height="100%" frameborder="0" style="border:0"
+              src="https://www.google.com/maps?q=Kyoto+to+Kansai+International+Airport+KIX+train&output=embed" allowfullscreen></iframe>
+          </div>
+
+          <div class="map" style="margin-top:12px">
+            <iframe width="100%" height="100%" frameborder="0" style="border:0"
+              src="https://www.google.com/maps?q=Kansai+International+Airport&output=embed" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr />
+
+    <!-- Giorno 15: arrival in Milan -->
+    <section id="day-15" class="day">
+      <h2>Giorno 15 — Arrivo a Milano Malpensa (MXP)</h2>
+      <div class="date">domenica 26 luglio 2026</div>
+      <p class="meta"><strong>Arrivo:</strong> MXP — Milano Malpensa • <strong>Pernottamento:</strong> a casa / arrivo finale.</p>
+
+      <div class="grid">
+        <div>
+          <div class="program">
+            <h4>Programma</h4>
+            <ul>
+              <li>Mattina / notte: Volo notturno PEK → MXP con arrivo previsto la mattina.</li>
+              <li>Mattina: Ritiro bagagli e rientro a casa.</li>
+            </ul>
+          </div>
+
+          <div class="visit-list">
+            <div class="visit">
+              <strong>Arrivo e rientro</strong>
+              <p>Procedura di sbarco, ritiro bagagli e trasferimento verso casa.</p>
+            </div>
+
+            <div class="visit">
+              <strong>Fine del viaggio</strong>
+              <p>Tempo per riposare e rivedere i ricordi del viaggio in famiglia.</p>
+            </div>
+          </div>
+
+          <a class="back-link" href="#toc">Torna all'indice</a>
+          <div class="sleep">Pernottamento: Casa / arrivo a Milano Malpensa</div>
+        </div>
+
+        <div>
+          <div class="map">
+            <iframe width="100%" height="100%" frameborder="0" style="border:0"
+              src="https://www.google.com/maps?q=Milano+Malpensa+Airport&output=embed" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Viaggio in Giappone. Documento generato il 16/02/2026 alle ore 22:16:00</p>
+    </footer>
+
+  </main>
+</body>
+</html>
