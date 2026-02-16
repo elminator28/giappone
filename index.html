@@ -13,9 +13,9 @@
       --page-bg:#f6f7f9;
       --radius:10px;
       --gap:14px;
-      --sidew:432px; /* right column width increased 20% from 360px */
-      --map-h:312px; /* map height increased 20% from 260px */
-      --map-large-h:432px; /* large map height increased 20% from 360px */
+      --sidew:432px;
+      --map-h:312px;
+      --map-large-h:432px;
     }
     html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:var(--page-bg); color:#111;}
     header{background:linear-gradient(90deg,#fff,#f0fbff);border-bottom:1px solid #e6eef6;padding:28px 18px;text-align:center}
@@ -40,7 +40,8 @@
     .visit{background:#fbfdff;border:1px solid #eef6fb;padding:10px;border-radius:8px}
     .visit strong{display:block;color:#0b4f7a;margin-bottom:6px}
     .visit p{margin:0;color:#333;font-size:14px}
-    .visit a{color:var(--accent);text-decoration:none;font-size:13px}
+    .visit a{color:var(--accent);text-decoration:none;font-size:13px;margin-left:6px}
+    .links {margin-top:8px}
     .back-link{display:block;margin-top:10px;font-size:13px}
     .sleep{margin-top:10px;padding:10px;border-radius:8px;background:#fff8e6;color:#6b4a00;font-weight:700}
     footer{margin-top:30px;text-align:center;color:var(--muted);font-size:14px;padding-bottom:40px}
@@ -55,7 +56,6 @@
   </header>
 
   <main>
-    <!-- Indice come tabella con indicazione del pernottamento -->
     <section id="toc" class="card">
       <h3>Indice sintetico</h3>
       <table class="toc" aria-label="Indice">
@@ -88,7 +88,6 @@
       </table>
     </section>
 
-    <!-- Voli (senza mappe) -->
     <section id="flights" class="card">
       <h3>Dettagli voli</h3>
       <div style="display:flex;gap:12px;flex-wrap:wrap">
@@ -132,11 +131,19 @@
             <div class="visit">
               <strong>Logistica aeroporto</strong>
               <p>Check-in e controllo bagagli prima del volo internazionale.</p>
+              <div class="links">
+                <a href="https://it.wikipedia.org/wiki/Aeroporto_di_Milano-Malpensa" target="_blank" rel="noopener">Maggiori informazioni</a>
+                <a href="https://commons.wikimedia.org/w/index.php?search=Milano+Malpensa&title=Special%3AMediaSearch&type=image" target="_blank" rel="noopener">Immagini</a>
+              </div>
             </div>
 
             <div class="visit">
               <strong>Scalo a PVG</strong>
               <p>Attesa per il volo PVG → NRT la mattina successiva.</p>
+              <div class="links">
+                <a href="https://it.wikipedia.org/wiki/Aeroporto_di_Shanghai-Pudong" target="_blank" rel="noopener">Maggiori informazioni</a>
+                <a href="https://commons.wikimedia.org/w/index.php?search=Shanghai+Pudong+Airport&title=Special%3AMediaSearch&type=image" target="_blank" rel="noopener">Immagini</a>
+              </div>
             </div>
           </div>
 
@@ -176,22 +183,38 @@
           <div class="visit-list">
             <div class="visit">
               <strong>Meiji Jingu</strong>
-              <p>Grande santuario shintoista immerso in un bosco urbano; luogo di cerimonie e passeggiate. <a href="https://en.wikipedia.org/wiki/Meiji_Shrine" target="_blank" rel="noopener">Maggiori informazioni (Wikipedia EN)</a></p>
+              <p>Grande santuario shintoista immerso in un bosco urbano; luogo di cerimonie e passeggiate.</p>
+              <div class="links">
+                <a href="https://en.wikipedia.org/wiki/Meiji_Shrine" target="_blank" rel="noopener">Maggiori informazioni (Wikipedia EN)</a>
+                <a href="https://commons.wikimedia.org/w/index.php?search=Meiji+Jingu&title=Special%3AMediaSearch&type=image" target="_blank" rel="noopener">Immagini</a>
+              </div>
             </div>
 
             <div class="visit">
               <strong>Harajuku (Takeshita)</strong>
-              <p>Via pedonale famosa per moda giovanile, negozi e dolci tipici; vivace e colorata. <a href="https://it.wikipedia.org/wiki/Harajuku" target="_blank" rel="noopener">Maggiori informazioni</a></p>
+              <p>Via pedonale famosa per moda giovanile, negozi e dolci tipici; vivace e colorata.</p>
+              <div class="links">
+                <a href="https://it.wikipedia.org/wiki/Harajuku" target="_blank" rel="noopener">Maggiori informazioni</a>
+                <a href="https://commons.wikimedia.org/w/index.php?search=Harajuku&title=Special%3AMediaSearch&type=image" target="_blank" rel="noopener">Immagini</a>
+              </div>
             </div>
 
             <div class="visit">
               <strong>Omotesando</strong>
-              <p>Viale elegante con boutique e architettura moderna; ideale per una passeggiata rilassata. <a href="https://it.wikipedia.org/wiki/Omotesand%C5%8D" target="_blank" rel="noopener">Maggiori informazioni</a></p>
+              <p>Viale elegante con boutique e architettura moderna; ideale per una passeggiata rilassata.</p>
+              <div class="links">
+                <a href="https://it.wikipedia.org/wiki/Omotesand%C5%8D" target="_blank" rel="noopener">Maggiori informazioni</a>
+                <a href="https://commons.wikimedia.org/w/index.php?search=Omotesando&title=Special%3AMediaSearch&type=image" target="_blank" rel="noopener">Immagini</a>
+              </div>
             </div>
 
             <div class="visit">
               <strong>Shibuya Crossing</strong>
-              <p>Incrocio pedonale iconico, simbolo della vivacità urbana di Tokyo; ottimo per foto. <a href="https://it.wikipedia.org/wiki/Shibuya" target="_blank" rel="noopener">Maggiori informazioni</a></p>
+              <p>Incrocio pedonale iconico, simbolo della vivacità urbana di Tokyo; ottimo per foto.</p>
+              <div class="links">
+                <a href="https://it.wikipedia.org/wiki/Shibuya" target="_blank" rel="noopener">Maggiori informazioni</a>
+                <a href="https://commons.wikimedia.org/w/index.php?search=Shibuya+Crossing&title=Special%3AMediaSearch&type=image" target="_blank" rel="noopener">Immagini</a>
+              </div>
             </div>
           </div>
 
@@ -231,17 +254,29 @@
           <div class="visit-list">
             <div class="visit">
               <strong>Palazzo Imperiale</strong>
-              <p>Residenza ufficiale dell'Imperatore del Giappone con giardini storici e il ponte Nijubashi. <a href="https://it.wikipedia.org/wiki/Palazzo_imperiale_di_Tokyo" target="_blank" rel="noopener">Maggiori informazioni</a></p>
+              <p>Residenza ufficiale dell'Imperatore del Giappone con giardini storici e il ponte Nijubashi.</p>
+              <div class="links">
+                <a href="https://it.wikipedia.org/wiki/Palazzo_imperiale_di_Tokyo" target="_blank" rel="noopener">Maggiori informazioni</a>
+                <a href="https://commons.wikimedia.org/w/index.php?search=Imperial+Palace+Tokyo&title=Special%3AMediaSearch&type=image" target="_blank" rel="noopener">Immagini</a>
+              </div>
             </div>
 
             <div class="visit">
               <strong>Ginza</strong>
-              <p>Quartiere commerciale di fascia alta, noto per grandi magazzini e ristoranti. <a href="https://it.wikipedia.org/wiki/Ginza" target="_blank" rel="noopener">Maggiori informazioni</a></p>
+              <p>Quartiere commerciale di fascia alta, noto per grandi magazzini e ristoranti.</p>
+              <div class="links">
+                <a href="https://it.wikipedia.org/wiki/Ginza" target="_blank" rel="noopener">Maggiori informazioni</a>
+                <a href="https://commons.wikimedia.org/w/index.php?search=Ginza&title=Special%3AMediaSearch&type=image" target="_blank" rel="noopener">Immagini</a>
+              </div>
             </div>
 
             <div class="visit">
               <strong>Shinjuku</strong>
-              <p>Area con grandi stazioni, centri commerciali e punti panoramici; vivace di sera. <a href="https://it.wikipedia.org/wiki/Shinjuku" target="_blank" rel="noopener">Maggiori informazioni</a></p>
+              <p>Area con grandi stazioni, centri commerciali e punti panoramici; vivace di sera.</p>
+              <div class="links">
+                <a href="https://it.wikipedia.org/wiki/Shinjuku" target="_blank" rel="noopener">Maggiori informazioni</a>
+                <a href="https://commons.wikimedia.org/w/index.php?search=Shinjuku&title=Special%3AMediaSearch&type=image" target="_blank" rel="noopener">Immagini</a>
+              </div>
             </div>
           </div>
 
@@ -281,22 +316,38 @@
           <div class="visit-list">
             <div class="visit">
               <strong>Ueno Park</strong>
-              <p>Parco cittadino con musei, stagni e spazi verdi; ideale per famiglie. <a href="https://it.wikipedia.org/wiki/Ueno" target="_blank" rel="noopener">Maggiori informazioni</a></p>
+              <p>Parco cittadino con musei, stagni e spazi verdi; ideale per famiglie.</p>
+              <div class="links">
+                <a href="https://it.wikipedia.org/wiki/Ueno" target="_blank" rel="noopener">Maggiori informazioni</a>
+                <a href="https://commons.wikimedia.org/w/index.php?search=Ueno+Park&title=Special%3AMediaSearch&type=image" target="_blank" rel="noopener">Immagini</a>
+              </div>
             </div>
 
             <div class="visit">
               <strong>Sensō-ji</strong>
-              <p>Il più antico tempio di Tokyo, con la vivace via Nakamise ricca di bancarelle. <a href="https://it.wikipedia.org/wiki/Sens%C5%8D-ji" target="_blank" rel="noopener">Maggiori informazioni</a></p>
+              <p>Il più antico tempio di Tokyo, con la vivace via Nakamise ricca di bancarelle.</p>
+              <div class="links">
+                <a href="https://it.wikipedia.org/wiki/Sens%C5%8D-ji" target="_blank" rel="noopener">Maggiori informazioni</a>
+                <a href="https://commons.wikimedia.org/w/index.php?search=Senso-ji&title=Special%3AMediaSearch&type=image" target="_blank" rel="noopener">Immagini</a>
+              </div>
             </div>
 
             <div class="visit">
               <strong>Ameyoko</strong>
-              <p>Mercato all'aperto vicino a Ueno Station, famoso per cibo e shopping. <a href="https://it.wikipedia.org/wiki/Ameya-Yokoch%C5%8D" target="_blank" rel="noopener">Maggiori informazioni</a></p>
+              <p>Mercato all'aperto vicino a Ueno Station, famoso per cibo e shopping.</p>
+              <div class="links">
+                <a href="https://it.wikipedia.org/wiki/Ameya-Yokoch%C5%8D" target="_blank" rel="noopener">Maggiori informazioni</a>
+                <a href="https://commons.wikimedia.org/w/index.php?search=Ameyoko&title=Special%3AMediaSearch&type=image" target="_blank" rel="noopener">Immagini</a>
+              </div>
             </div>
 
             <div class="visit">
               <strong>Tokyo Skytree</strong>
-              <p>Torre di osservazione con viste panoramiche sulla città; attrazione moderna. <a href="https://it.wikipedia.org/wiki/Tokyo_Skytree" target="_blank" rel="noopener">Maggiori informazioni</a></p>
+              <p>Torre di osservazione con viste panoramiche sulla città; attrazione moderna.</p>
+              <div class="links">
+                <a href="https://it.wikipedia.org/wiki/Tokyo_Skytree" target="_blank" rel="noopener">Maggiori informazioni</a>
+                <a href="https://commons.wikimedia.org/w/index.php?search=Tokyo+Skytree&title=Special%3AMediaSearch&type=image" target="_blank" rel="noopener">Immagini</a>
+              </div>
             </div>
           </div>
 
@@ -313,10 +364,681 @@
       </div>
     </section>
 
-    <!-- ... rest of itinerary unchanged ... -->
+    <!-- The rest of the itinerary remains unchanged; each visit includes both a Wikipedia link and an Immagini (Commons) link in the same pattern as above. -->
+
+    <!-- Giorno 4 -->
+    <hr />
+    <section id="day-4" class="day">
+      <h2>Giorno 4 — Escursione in giornata a Nikkō (da Tokyo)</h2>
+      <div class="date">mercoledì 15 luglio 2026</div>
+      <p class="meta"><strong>Trasferimento:</strong> Tokyo → Nikkō (treno). <strong>Pernottamento:</strong> Tokyo.</p>
+      <div class="grid">
+        <div>
+          <div class="program">
+            <h4>Programma</h4>
+            <ul>
+              <li>Mattina: Treno per Nikkō.</li>
+              <li>Giornata: Visita al complesso del Tōshō-gū e passeggiate tra i cedri.</li>
+              <li>Sera: Rientro a Tokyo.</li>
+            </ul>
+          </div>
+
+          <div class="visit-list">
+            <div class="visit">
+              <strong>Tōshō-gū</strong>
+              <p>Santuario riccamente decorato dedicato a Tokugawa Ieyasu, noto per le sue sculture e l'architettura.</p>
+              <div class="links">
+                <a href="https://it.wikipedia.org/wiki/T%C5%8Dsh%C5%8D-g%C5%AB" target="_blank" rel="noopener">Maggiori informazioni</a>
+                <a href="https://commons.wikimedia.org/w/index.php?search=Toshogu+Nikko&title=Special%3AMediaSearch&type=image" target="_blank" rel="noopener">Immagini</a>
+              </div>
+            </div>
+
+            <div class="visit">
+              <strong>Sentieri naturali</strong>
+              <p>Viali di cedri secolari e paesaggi montani che offrono un contrasto con Tokyo.</p>
+              <div class="links">
+                <a href="https://it.wikipedia.org/wiki/Nikk%C5%8D" target="_blank" rel="noopener">Maggiori informazioni</a>
+                <a href="https://commons.wikimedia.org/w/index.php?search=Nikko&title=Special%3AMediaSearch&type=image" target="_blank" rel="noopener">Immagini</a>
+              </div>
+            </div>
+          </div>
+
+          <a class="back-link" href="#toc">Torna all'indice</a>
+          <div class="sleep">Pernottamento: Hotel a Tokyo</div>
+        </div>
+
+        <div>
+          <div class="map-large">
+            <iframe width="100%" height="100%" frameborder="0" style="border:0"
+              src="https://www.google.com/maps?q=Tokyo+to+Nikko+train&output=embed" allowfullscreen></iframe>
+          </div>
+
+          <div class="map" style="margin-top:12px">
+            <iframe width="100%" height="100%" frameborder="0" style="border:0"
+              src="https://www.google.com/maps?q=Nikko+Toshogu&output=embed" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Giorno 5 -->
+    <hr />
+    <section id="day-5" class="day">
+      <h2>Giorno 5 — Escursione in giornata al Monte Fuji</h2>
+      <div class="date">giovedì 16 luglio 2026</div>
+      <p class="meta"><strong>Trasferimento:</strong> Tokyo → Kawaguchiko / Fuji Five Lakes (treno + bus). <strong>Pernottamento:</strong> Tokyo.</p>
+      <div class="grid">
+        <div>
+          <div class="program">
+            <h4>Programma</h4>
+            <ul>
+              <li>Mattina: Partenza per Kawaguchiko.</li>
+              <li>Giornata: Punti panoramici e passeggiate sul lago.</li>
+              <li>Pomeriggio: Possibile onsen o rientro a Tokyo.</li>
+            </ul>
+          </div>
+
+          <div class="visit-list">
+            <div class="visit">
+              <strong>Monte Fuji</strong>
+              <p>Simbolo del Giappone, vulcano sacro con viste spettacolari quando il cielo è sereno.</p>
+              <div class="links">
+                <a href="https://it.wikipedia.org/wiki/Monte_Fuji" target="_blank" rel="noopener">Maggiori informazioni</a>
+                <a href="https://commons.wikimedia.org/w/index.php?search=Mount+Fuji&title=Special%3AMediaSearch&type=image" target="_blank" rel="noopener">Immagini</a>
+              </div>
+            </div>
+
+            <div class="visit">
+              <strong>Lago Kawaguchi</strong>
+              <p>Uno dei Fuji Five Lakes, noto per le vedute del monte e le attività lacustri.</p>
+              <div class="links">
+                <a href="https://it.wikipedia.org/wiki/Lago_Kawaguchi" target="_blank" rel="noopener">Maggiori informazioni</a>
+                <a href="https://commons.wikimedia.org/w/index.php?search=Kawaguchiko+Lake&title=Special%3AMediaSearch&type=image" target="_blank" rel="noopener">Immagini</a>
+              </div>
+            </div>
+          </div>
+
+          <a class="back-link" href="#toc">Torna all'indice</a>
+          <div class="sleep">Pernottamento: Hotel a Tokyo</div>
+        </div>
+
+        <div>
+          <div class="map-large">
+            <iframe width="100%" height="100%" frameborder="0" style="border:0"
+              src="https://www.google.com/maps?q=Tokyo+to+Kawaguchiko+train&output=embed" allowfullscreen></iframe>
+          </div>
+
+          <div class="map" style="margin-top:12px">
+            <iframe width="100%" height="100%" frameborder="0" style="border:0"
+              src="https://www.google.com/maps?q=Kawaguchiko+Lake&output=embed" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Giorno 6 -->
+    <hr />
+    <section id="day-6" class="day">
+      <h2>Giorno 6 — Escursione in giornata a Kamakura</h2>
+      <div class="date">venerdì 17 luglio 2026</div>
+      <p class="meta"><strong>Trasferimento:</strong> Tokyo → Kamakura (treno). <strong>Pernottamento:</strong> Tokyo.</p>
+      <div class="grid">
+        <div>
+          <div class="program">
+            <h4>Programma</h4>
+            <ul>
+              <li>Mattina: Treno per Kamakura; visita al Grande Buddha (Daibutsu).</li>
+              <li>Pomeriggio: Hasedera e passeggiate costiere.</li>
+              <li>Sera: Rientro a Tokyo.</li>
+            </ul>
+          </div>
+
+          <div class="visit-list">
+            <div class="visit">
+              <strong>Grande Buddha (Kōtoku-in)</strong>
+              <p>Statua bronzea all'aperto, simbolo di Kamakura e meta storica.</p>
+              <div class="links">
+                <a href="https://it.wikipedia.org/wiki/Grande_Buddha_di_Kamakura" target="_blank" rel="noopener">Maggiori informazioni</a>
+                <a href="https://commons.wikimedia.org/w/index.php?search=Great+Buddha+Kamakura&title=Special%3AMediaSearch&type=image" target="_blank" rel="noopener">Immagini</a>
+              </div>
+            </div>
+
+            <div class="visit">
+              <strong>Hasedera</strong>
+              <p>Tempio con giardini e vista sul mare, noto per le sue statue e i fiori stagionali.</p>
+              <div class="links">
+                <a href="https://it.wikipedia.org/wiki/Hasedera" target="_blank" rel="noopener">Maggiori informazioni</a>
+                <a href="https://commons.wikimedia.org/w/index.php?search=Hasedera+Kamakura&title=Special%3AMediaSearch&type=image" target="_blank" rel="noopener">Immagini</a>
+              </div>
+            </div>
+          </div>
+
+          <a class="back-link" href="#toc">Torna all'indice</a>
+          <div class="sleep">Pernottamento: Hotel a Tokyo</div>
+        </div>
+
+        <div>
+          <div class="map-large">
+            <iframe width="100%" height="100%" frameborder="0" style="border:0"
+              src="https://www.google.com/maps?q=Tokyo+to+Kamakura+train&output=embed" allowfullscreen></iframe>
+          </div>
+
+          <div class="map" style="margin-top:12px">
+            <iframe width="100%" height="100%" frameborder="0" style="border:0"
+              src="https://www.google.com/maps?q=Kamakura+Great+Buddha&output=embed" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Giorno 7 -->
+    <hr />
+    <section id="day-7" class="day">
+      <h2>Giorno 7 — Trasferimento a Kanazawa / Higashi Chaya</h2>
+      <div class="date">sabato 18 luglio 2026</div>
+      <p class="meta"><strong>Trasferimento:</strong> Tokyo → Kanazawa (shinkansen / limited express). <strong>Pernottamento:</strong> Kanazawa.</p>
+      <div class="grid">
+        <div>
+          <div class="program">
+            <h4>Programma</h4>
+            <ul>
+              <li>Mattina: Partenza in treno da Tokyo verso Kanazawa; arrivo e check-in in hotel.</li>
+              <li>Pomeriggio: Esplorazione del quartiere storico di Higashi Chaya.</li>
+              <li>Sera: Cena e passeggiata serale nei dintorni.</li>
+            </ul>
+          </div>
+
+          <div class="visit-list">
+            <div class="visit">
+              <strong>Higashi Chaya</strong>
+              <p>Storico quartiere delle case da tè, con strade ben conservate e atmosfera tradizionale.</p>
+              <div class="links">
+                <a href="https://it.wikipedia.org/wiki/Higashi_Chaya" target="_blank" rel="noopener">Maggiori informazioni</a>
+                <a href="https://commons.wikimedia.org/w/index.php?search=Higashi+Chaya&title=Special%3AMediaSearch&type=image" target="_blank" rel="noopener">Immagini</a>
+              </div>
+            </div>
+
+            <div class="visit">
+              <strong>Artigianato locale</strong>
+              <p>Negozietti con oggetti tradizionali e foglia d'oro tipici di Kanazawa.</p>
+              <div class="links">
+                <a href="https://it.wikipedia.org/wiki/Kanazawa" target="_blank" rel="noopener">Maggiori informazioni</a>
+                <a href="https://commons.wikimedia.org/w/index.php?search=Kanazawa+crafts&title=Special%3AMediaSearch&type=image" target="_blank" rel="noopener">Immagini</a>
+              </div>
+            </div>
+          </div>
+
+          <a class="back-link" href="#toc">Torna all'indice</a>
+          <div class="sleep">Pernottamento: Hotel a Kanazawa</div>
+        </div>
+
+        <div>
+          <div class="map-large">
+            <iframe width="100%" height="100%" frameborder="0" style="border:0"
+              src="https://www.google.com/maps?q=Tokyo+to+Kanazawa+train&output=embed" allowfullscreen></iframe>
+          </div>
+
+          <div class="map" style="margin-top:12px">
+            <iframe width="100%" height="100%" frameborder="0" style="border:0"
+              src="https://www.google.com/maps?q=Higashi+Chaya+Kanazawa&output=embed" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Giorno 8 -->
+    <hr />
+    <section id="day-8" class="day">
+      <h2>Giorno 8 — Kanazawa: Kenroku‑en, Castello, Omicho Market</h2>
+      <div class="date">domenica 19 luglio 2026</div>
+      <p class="meta"><strong>Pernottamento:</strong> Kanazawa.</p>
+      <div class="grid">
+        <div>
+          <div class="program">
+            <h4>Programma</h4>
+            <ul>
+              <li>Mattina: Kenroku‑en.</li>
+              <li>Mezzogiorno: Castello di Kanazawa.</li>
+              <li>Pomeriggio: Mercato Omicho.</li>
+            </ul>
+          </div>
+
+          <div class="visit-list">
+            <div class="visit">
+              <strong>Kenroku‑en</strong>
+              <p>Uno dei giardini più celebri del Giappone, noto per la sua bellezza paesaggistica.</p>
+              <div class="links">
+                <a href="https://it.wikipedia.org/wiki/Kenroku-en" target="_blank" rel="noopener">Maggiori informazioni</a>
+                <a href="https://commons.wikimedia.org/w/index.php?search=Kenroku-en&title=Special%3AMediaSearch&type=image" target="_blank" rel="noopener">Immagini</a>
+              </div>
+            </div>
+
+            <div class="visit">
+              <strong>Castello di Kanazawa</strong>
+              <p>Complesso storico con mura e giardini restaurati; interessante per la storia locale.</p>
+              <div class="links">
+                <a href="https://it.wikipedia.org/wiki/Castello_di_Kanazawa" target="_blank" rel="noopener">Maggiori informazioni</a>
+                <a href="https://commons.wikimedia.org/w/index.php?search=Kanazawa+Castle&title=Special%3AMediaSearch&type=image" target="_blank" rel="noopener">Immagini</a>
+              </div>
+            </div>
+
+            <div class="visit">
+              <strong>Omicho Market</strong>
+              <p>Mercato centrale di Kanazawa, famoso per il pesce fresco e le specialità locali.</p>
+              <div class="links">
+                <a href="https://it.wikipedia.org/wiki/Omicho_Market" target="_blank" rel="noopener">Maggiori informazioni</a>
+                <a href="https://commons.wikimedia.org/w/index.php?search=Omicho+Market&title=Special%3AMediaSearch&type=image" target="_blank" rel="noopener">Immagini</a>
+              </div>
+            </div>
+          </div>
+
+          <a class="back-link" href="#toc">Torna all'indice</a>
+          <div class="sleep">Pernottamento: Hotel a Kanazawa</div>
+        </div>
+
+        <div>
+          <div class="map">
+            <iframe width="100%" height="100%" frameborder="0" style="border:0"
+              src="https://www.google.com/maps?q=Kenrokuen+Garden+Kanazawa+Omicho+Market&output=embed" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Giorno 9 -->
+    <hr />
+    <section id="day-9" class="day">
+      <h2>Giorno 9 — Trasferimento Kanazawa → Kyoto</h2>
+      <div class="date">lunedì 20 luglio 2026</div>
+      <p class="meta"><strong>Trasferimento:</strong> Kanazawa → Kyoto (treno). <strong>Pernottamento:</strong> Kyoto.</p>
+      <div class="grid">
+        <div>
+          <div class="program">
+            <h4>Programma</h4>
+            <ul>
+              <li>Mattina: Ultime visite a Kanazawa.</li>
+              <li>Mezzogiorno: Treno per Kyoto e check-in.</li>
+              <li>Pomeriggio/sera: Passeggiata a Gion.</li>
+            </ul>
+          </div>
+
+          <div class="visit-list">
+            <div class="visit">
+              <strong>Viaggio</strong>
+              <p>Treno verso Kyoto; sistemazione in hotel e preparazione per i giorni successivi.</p>
+              <div class="links">
+                <a href="https://it.wikipedia.org/wiki/Treno_in_Giappone" target="_blank" rel="noopener">Maggiori informazioni</a>
+                <a href="https://commons.wikimedia.org/w/index.php?search=Shinkansen&title=Special%3AMediaSearch&type=image" target="_blank" rel="noopener">Immagini</a>
+              </div>
+            </div>
+
+            <div class="visit">
+              <strong>Gion</strong>
+              <p>Storico quartiere delle geisha con vie tradizionali e atmosfera serale.</p>
+              <div class="links">
+                <a href="https://it.wikipedia.org/wiki/Gion" target="_blank" rel="noopener">Maggiori informazioni</a>
+                <a href="https://commons.wikimedia.org/w/index.php?search=Gion+Kyoto&title=Special%3AMediaSearch&type=image" target="_blank" rel="noopener">Immagini</a>
+              </div>
+            </div>
+          </div>
+
+          <a class="back-link" href="#toc">Torna all'indice</a>
+          <div class="sleep">Pernottamento: Hotel a Kyoto</div>
+        </div>
+
+        <div>
+          <div class="map-large">
+            <iframe width="100%" height="100%" frameborder="0" style="border:0"
+              src="https://www.google.com/maps?q=Kanazawa+to+Kyoto+train&output=embed" allowfullscreen></iframe>
+          </div>
+
+          <div class="map" style="margin-top:12px">
+            <iframe width="100%" height="100%" frameborder="0" style="border:0"
+              src="https://www.google.com/maps?q=Gion+Kyoto&output=embed" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Giorno 10 -->
+    <hr />
+    <section id="day-10" class="day">
+      <h2>Giorno 10 — Kyoto: Kiyomizudera, Heian-jingu, Fushimi Inari</h2>
+      <div class="date">martedì 21 luglio 2026</div>
+      <p class="meta"><strong>Pernottamento:</strong> Kyoto.</p>
+      <div class="grid">
+        <div>
+          <div class="program">
+            <h4>Programma</h4>
+            <ul>
+              <li>Mattina: Kiyomizudera.</li>
+              <li>Mezzogiorno: Heian-jingu (se il tempo lo permette).</li>
+              <li>Pomeriggio: Fushimi Inari.</li>
+            </ul>
+          </div>
+
+          <div class="visit-list">
+            <div class="visit">
+              <strong>Kiyomizudera</strong>
+              <p>Tempio famoso per la sua terrazza panoramica e le vie storiche circostanti.</p>
+              <div class="links">
+                <a href="https://it.wikipedia.org/wiki/Kiyomizu-dera" target="_blank" rel="noopener">Maggiori informazioni</a>
+                <a href="https://commons.wikimedia.org/w/index.php?search=Kiyomizu-dera&title=Special%3AMediaSearch&type=image" target="_blank" rel="noopener">Immagini</a>
+              </div>
+            </div>
+
+            <div class="visit">
+              <strong>Heian-jingu</strong>
+              <p>Santuario moderno con ampi giardini e un grande torii distintivo.</p>
+              <div class="links">
+                <a href="https://it.wikipedia.org/wiki/Heian-jing%C5%AB" target="_blank" rel="noopener">Maggiori informazioni</a>
+                <a href="https://commons.wikimedia.org/w/index.php?search=Heian+Jingu&title=Special%3AMediaSearch&type=image" target="_blank" rel="noopener">Immagini</a>
+              </div>
+            </div>
+
+            <div class="visit">
+              <strong>Fushimi Inari</strong>
+              <p>Santuario celebre per i suoi sentieri di migliaia di torii rossi che salgono il colle.</p>
+              <div class="links">
+                <a href="https://it.wikipedia.org/wiki/Fushimi_Inari-taisha" target="_blank" rel="noopener">Maggiori informazioni</a>
+                <a href="https://commons.wikimedia.org/w/index.php?search=Fushimi+Inari&title=Special%3AMediaSearch&type=image" target="_blank" rel="noopener">Immagini</a>
+              </div>
+            </div>
+          </div>
+
+          <a class="back-link" href="#toc">Torna all'indice</a>
+          <div class="sleep">Pernottamento: Hotel a Kyoto</div>
+        </div>
+
+        <div>
+          <div class="map">
+            <iframe width="100%" height="100%" frameborder="0" style="border:0"
+              src="https://www.google.com/maps?q=Kiyomizu-dera+Heian+Shrine+Fushimi+Inari&output=embed" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Giorno 11 -->
+    <hr />
+    <section id="day-11" class="day">
+      <h2>Giorno 11 — Kyoto: Castello di Nijo, Ryoanji, Arashiyama</h2>
+      <div class="date">mercoledì 22 luglio 2026</div>
+      <p class="meta"><strong>Pernottamento:</strong> Kyoto.</p>
+      <div class="grid">
+        <div>
+          <div class="program">
+            <h4>Programma</h4>
+            <ul>
+              <li>Mattina: Castello di Nijo.</li>
+              <li>Mezzogiorno: Ryoanji.</li>
+              <li>Pomeriggio: Arashiyama e foresta di bambù.</li>
+            </ul>
+          </div>
+
+          <div class="visit-list">
+            <div class="visit">
+              <strong>Castello di Nijo</strong>
+              <p>Residenza storica degli shogun con interni decorati e giardini.</p>
+              <div class="links">
+                <a href="https://it.wikipedia.org/wiki/Castello_di_Nij%C5%8D" target="_blank" rel="noopener">Maggiori informazioni</a>
+                <a href="https://commons.wikimedia.org/w/index.php?search=Nijo+Castle&title=Special%3AMediaSearch&type=image" target="_blank" rel="noopener">Immagini</a>
+              </div>
+            </div>
+
+            <div class="visit">
+              <strong>Ryoanji</strong>
+              <p>Tempio zen noto per il suo giardino di pietra minimalista.</p>
+              <div class="links">
+                <a href="https://it.wikipedia.org/wiki/Ry%C5%8Dan-ji" target="_blank" rel="noopener">Maggiori informazioni</a>
+                <a href="https://commons.wikimedia.org/w/index.php?search=Ryoanji&title=Special%3AMediaSearch&type=image" target="_blank" rel="noopener">Immagini</a>
+              </div>
+            </div>
+
+            <div class="visit">
+              <strong>Arashiyama</strong>
+              <p>Zona panoramica con la famosa foresta di bambù e passeggiate lungo il fiume.</p>
+              <div class="links">
+                <a href="https://it.wikipedia.org/wiki/Arashiyama" target="_blank" rel="noopener">Maggiori informazioni</a>
+                <a href="https://commons.wikimedia.org/w/index.php?search=Arashiyama&title=Special%3AMediaSearch&type=image" target="_blank" rel="noopener">Immagini</a>
+              </div>
+            </div>
+          </div>
+
+          <a class="back-link" href="#toc">Torna all'indice</a>
+          <div class="sleep">Pernottamento: Hotel a Kyoto</div>
+        </div>
+
+        <div>
+          <div class="map">
+            <iframe width="100%" height="100%" frameborder="0" style="border:0"
+              src="https://www.google.com/maps?q=Nijo+Castle+Ryoanji+Arashiyama&output=embed" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Giorno 12 -->
+    <hr />
+    <section id="day-12" class="day">
+      <h2>Giorno 12 — Escursione in giornata a Nara: Tōdai-ji, Parco di Nara, Kasuga Taisha</h2>
+      <div class="date">giovedì 23 luglio 2026</div>
+      <p class="meta"><strong>Trasferimento:</strong> Kyoto → Nara (treno). <strong>Pernottamento:</strong> Kyoto.</p>
+      <div class="grid">
+        <div>
+          <div class="program">
+            <h4>Programma</h4>
+            <ul>
+              <li>Mattina: Treno per Nara; visita al Tōdai-ji.</li>
+              <li>Mezzogiorno: Parco di Nara e interazione con i cervi.</li>
+              <li>Pomeriggio: Kasuga Taisha e rientro a Kyoto.</li>
+            </ul>
+          </div>
+
+          <div class="visit-list">
+            <div class="visit">
+              <strong>Tōdai-ji</strong>
+              <p>Tempio famoso per la grande sala del Buddha e la statua imponente.</p>
+              <div class="links">
+                <a href="https://it.wikipedia.org/wiki/T%C5%8Ddai-ji" target="_blank" rel="noopener">Maggiori informazioni</a>
+                <a href="https://commons.wikimedia.org/w/index.php?search=Todaiji&title=Special%3AMediaSearch&type=image" target="_blank" rel="noopener">Immagini</a>
+              </div>
+            </div>
+
+            <div class="visit">
+              <strong>Parco di Nara</strong>
+              <p>Parco urbano dove i cervi girano liberi; luogo ideale per passeggiare.</p>
+              <div class="links">
+                <a href="https://it.wikipedia.org/wiki/Parco_di_Nara" target="_blank" rel="noopener">Maggiori informazioni</a>
+                <a href="https://commons.wikimedia.org/w/index.php?search=Nara+Park&title=Special%3AMediaSearch&type=image" target="_blank" rel="noopener">Immagini</a>
+              </div>
+            </div>
+
+            <div class="visit">
+              <strong>Kasuga Taisha</strong>
+              <p>Santuario noto per le sue numerose lanterne e l'atmosfera boschiva.</p>
+              <div class="links">
+                <a href="https://it.wikipedia.org/wiki/Kasuga_Taisha" target="_blank" rel="noopener">Maggiori informazioni</a>
+                <a href="https://commons.wikimedia.org/w/index.php?search=Kasuga+Taisha&title=Special%3AMediaSearch&type=image" target="_blank" rel="noopener">Immagini</a>
+              </div>
+            </div>
+          </div>
+
+          <a class="back-link" href="#toc">Torna all'indice</a>
+          <div class="sleep">Pernottamento: Hotel a Kyoto</div>
+        </div>
+
+        <div>
+          <div class="map-large">
+            <iframe width="100%" height="100%" frameborder="0" style="border:0"
+              src="https://www.google.com/maps?q=Kyoto+to+Nara+train&output=embed" allowfullscreen></iframe>
+          </div>
+
+          <div class="map" style="margin-top:12px">
+            <iframe width="100%" height="100%" frameborder="0" style="border:0"
+              src="https://www.google.com/maps?q=Todaiji+Nara+Park+Kasuga+Taisha&output=embed" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Giorno 13 -->
+    <hr />
+    <section id="day-13" class="day">
+      <h2>Giorno 13 — Escursione in giornata a Osaka: Castello e Dotonbori</h2>
+      <div class="date">venerdì 24 luglio 2026</div>
+      <p class="meta"><strong>Trasferimento:</strong> Kyoto → Osaka (treno). <strong>Pernottamento:</strong> Kyoto.</p>
+      <div class="grid">
+        <div>
+          <div class="program">
+            <h4>Programma</h4>
+            <ul>
+              <li>Mattina: Treno per Osaka; visita al Castello di Osaka.</li>
+              <li>Pomeriggio: Esplorazione di quartieri o musei.</li>
+              <li>Sera: Dotonbori per street food e passeggiata; rientro a Kyoto.</li>
+            </ul>
+          </div>
+
+          <div class="visit-list">
+            <div class="visit">
+              <strong>Castello di Osaka</strong>
+              <p>Monumento storico con museo e vedute panoramiche dalla torre.</p>
+              <div class="links">
+                <a href="https://it.wikipedia.org/wiki/Castello_di_Osaka" target="_blank" rel="noopener">Maggiori informazioni</a>
+                <a href="https://commons.wikimedia.org/w/index.php?search=Osaka+Castle&title=Special%3AMediaSearch&type=image" target="_blank" rel="noopener">Immagini</a>
+              </div>
+            </div>
+
+            <div class="visit">
+              <strong>Dotonbori</strong>
+              <p>Quartiere famoso per le insegne luminose e il cibo di strada.</p>
+              <div class="links">
+                <a href="https://it.wikipedia.org/wiki/Dotonbori" target="_blank" rel="noopener">Maggiori informazioni</a>
+                <a href="https://commons.wikimedia.org/w/index.php?search=Dotonbori&title=Special%3AMediaSearch&type=image" target="_blank" rel="noopener">Immagini</a>
+              </div>
+            </div>
+          </div>
+
+          <a class="back-link" href="#toc">Torna all'indice</a>
+          <div class="sleep">Pernottamento: Hotel a Kyoto</div>
+        </div>
+
+        <div>
+          <div class="map-large">
+            <iframe width="100%" height="100%" frameborder="0" style="border:0"
+              src="https://www.google.com/maps?q=Kyoto+to+Osaka+train&output=embed" allowfullscreen></iframe>
+          </div>
+
+          <div class="map" style="margin-top:12px">
+            <iframe width="100%" height="100%" frameborder="0" style="border:0"
+              src="https://www.google.com/maps?q=Osaka+Castle+Dotonbori&output=embed" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Giorno 14 -->
+    <hr />
+    <section id="day-14" class="day">
+      <h2>Giorno 14 — Partenza: trasferimento Kyoto → KIX e voli di rientro</h2>
+      <div class="date">sabato 25 luglio 2026</div>
+      <p class="meta"><strong>Trasferimento:</strong> Kyoto → KIX — Kansai International (Osaka) • <strong>Volo:</strong> KIX 14:00 → PEK 16:25 • <strong>Pernottamento:</strong> A bordo (arrivo il giorno successivo).</p>
+      <div class="grid">
+        <div>
+          <div class="program">
+            <h4>Programma</h4>
+            <ul>
+              <li>Mattina: Check-out dall'hotel e trasferimento a KIX.</li>
+              <li>Mezzogiorno: Check-in internazionale e controllo bagagli.</li>
+              <li>Pomeriggio: Volo KIX → PEK, proseguimento verso MXP nella notte/prime ore del giorno successivo.</li>
+            </ul>
+          </div>
+
+          <div class="visit-list">
+            <div class="visit">
+              <strong>Trasferimento a KIX</strong>
+              <p>Organizzare il trasferimento con anticipo per rispettare i tempi di check-in internazionale.</p>
+              <div class="links">
+                <a href="https://it.wikipedia.org/wiki/Aeroporto_internazionale_del_Kansai" target="_blank" rel="noopener">Maggiori informazioni</a>
+                <a href="https://commons.wikimedia.org/w/index.php?search=Kansai+International+Airport&title=Special%3AMediaSearch&type=image" target="_blank" rel="noopener">Immagini</a>
+              </div>
+            </div>
+
+            <div class="visit">
+              <strong>Voli di rientro</strong>
+              <p>KIX 14:00 → PEK 16:25; proseguimento PEK → MXP (partenza notturna, arrivo il giorno successivo).</p>
+              <div class="links">
+                <a href="https://it.wikipedia.org/wiki/Aeroporto_internazionale_del_Kansai" target="_blank" rel="noopener">Maggiori informazioni</a>
+                <a href="https://commons.wikimedia.org/w/index.php?search=Kansai+Airport+flight&title=Special%3AMediaSearch&type=image" target="_blank" rel="noopener">Immagini</a>
+              </div>
+            </div>
+          </div>
+
+          <a class="back-link" href="#toc">Torna all'indice</a>
+          <div class="sleep">Pernottamento: A bordo (arrivo a Milano il giorno successivo)</div>
+        </div>
+
+        <div>
+          <div class="map-large">
+            <iframe width="100%" height="100%" frameborder="0" style="border:0"
+              src="https://www.google.com/maps?q=Kyoto+to+Kansai+International+Airport+KIX+train&output=embed" allowfullscreen></iframe>
+          </div>
+
+          <div class="map" style="margin-top:12px">
+            <iframe width="100%" height="100%" frameborder="0" style="border:0"
+              src="https://www.google.com/maps?q=Kansai+International+Airport&output=embed" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Giorno 15 -->
+    <hr />
+    <section id="day-15" class="day">
+      <h2>Giorno 15 — Arrivo a Milano Malpensa (MXP)</h2>
+      <div class="date">domenica 26 luglio 2026</div>
+      <p class="meta"><strong>Arrivo:</strong> MXP — Milano Malpensa • <strong>Pernottamento:</strong> —</p>
+      <div class="grid">
+        <div>
+          <div class="program">
+            <h4>Programma</h4>
+            <ul>
+              <li>Mattina / notte: Volo notturno PEK → MXP con arrivo previsto la mattina.</li>
+              <li>Mattina: Ritiro bagagli e rientro a casa.</li>
+            </ul>
+          </div>
+
+          <div class="visit-list">
+            <div class="visit">
+              <strong>Arrivo e rientro</strong>
+              <p>Procedura di sbarco, ritiro bagagli e trasferimento verso casa.</p>
+              <div class="links">
+                <a href="https://it.wikipedia.org/wiki/Aeroporto_di_Milano-Malpensa" target="_blank" rel="noopener">Maggiori informazioni</a>
+                <a href="https://commons.wikimedia.org/w/index.php?search=Milano+Malpensa&title=Special%3AMediaSearch&type=image" target="_blank" rel="noopener">Immagini</a>
+              </div>
+            </div>
+
+            <div class="visit">
+              <strong>Fine del viaggio</strong>
+              <p>Tempo per riposare e rivedere i ricordi del viaggio in famiglia.</p>
+            </div>
+          </div>
+
+          <a class="back-link" href="#toc">Torna all'indice</a>
+          <div class="sleep">Pernottamento: —</div>
+        </div>
+
+        <div>
+          <div class="map">
+            <iframe width="100%" height="100%" frameborder="0" style="border:0"
+              src="https://www.google.com/maps?q=Milano+Malpensa+Airport&output=embed" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <footer>
-      <p>Viaggio in Giappone. Documento generato il 16/02/2026 alle ore 23:12:00</p>
+      <p>Viaggio in Giappone. Documento generato il 16/02/2026 alle ore 23:14:00</p>
     </footer>
 
   </main>
